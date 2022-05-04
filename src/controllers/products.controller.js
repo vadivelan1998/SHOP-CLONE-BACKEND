@@ -1,12 +1,12 @@
-const Skin = require("../models/products.model");
+const Product = require("../models/products.model");
 const express = require("express");
 
 const router = express.Router();
 
 router.get("", async (req, res) => {
   try {
-    const skin = await Skin.find({}).lean().exec();
-    return res.status(200).send(skin);
+    const products = await Product.find({}).lean().exec();
+    return res.status(200).send(products);
   } catch (error) {
     return res.status(400).send(error);
   }

@@ -9,7 +9,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.json());
-app.use(cors())
+ app.use(cors())
 
 const { register, login } = require("./controllers/auth.controller");
 
@@ -21,16 +21,16 @@ const cartController=require("./controllers/cart.controller")
 
 
 //__dirname+"/view/home.html
-app.get("/",(req,res)=>{
-res.send("welcome Nykaaman.com clone")
-})
+// app.get("/",(req,res)=>{
+// res.send("welcome Nykaaman.com clone")
+// })
 
 app.post("/register", register);
 app.post("/login", login);
 
 
 
-app.use("/skins", productController);
+app.use("/products", productController);
 app.use("/addresses",addressController);
 app.use("/carts",cartController)
 

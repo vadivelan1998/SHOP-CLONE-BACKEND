@@ -1,13 +1,15 @@
 const mongoose = require("mongoose");
-const skinCareSchema = new mongoose.Schema(
+const productCareSchema = new mongoose.Schema(
   {
-    img_url: { type: String, required: true },
-    title: { type: String, required: true },
-    striked_price: { type: String, required: true },
+    imageurl: { type: String, required: true },
+    Category: { type: String, required: true },
+    Brand: { type: String, required: true },
+    Name: { type: String, required: true },
     price: { type: Number, required: true },
-    off: { type: String, required: true },
-    value: { type: String, required: true },
-    category: [{ type: String, required: true }],
+    typeofproduct: { type: String, required: true },
+    Manufacturer: { type: String, required: false },
+    styleType: { type: String, required: false },
+    sizeorigin: { type: String, required: false },
   },
   {
     versionKey: false,
@@ -15,5 +17,5 @@ const skinCareSchema = new mongoose.Schema(
   }
 );
 
-const Skin = mongoose.model("skin", skinCareSchema);
-module.exports = Skin;
+const Product = mongoose.model("product", productCareSchema);
+module.exports = Product;

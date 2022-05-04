@@ -23,7 +23,7 @@ const register = async (req, res) => {
     const token = generateToken(user);
     return res.status(200).send({ user: user, token: token , status: true});
   } catch (err) {
-    res.status(400).send({ message: err.message });
+    res.status(400).send({ message1: err.message });
   }
 };
 
