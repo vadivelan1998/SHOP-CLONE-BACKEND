@@ -31,6 +31,7 @@ app.post("/login", login);
 
 
 app.use("/products", productController);
+//app.use("/products/:id", productController);
 app.use("/addresses",addressController);
 app.use("/carts",cartController)
 
